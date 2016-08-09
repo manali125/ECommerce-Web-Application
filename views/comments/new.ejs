@@ -1,0 +1,24 @@
+<%include ../partials/headers%>
+<div class="container">
+    <div class="row">
+        <h1 align="center">Add a new comment to <%=items.name%></h1><br><br>
+        <div style="width:25%; margin:0 auto;">
+        <form action="/items/<%=items._id %>/comments" method="POST">
+            <div class="form-group">
+                 <input class="form-control" type="text" name="comment[author]" placeholder="author">
+            </div>
+            <div class="form-group">
+            <input class="form-control" type="textarea" name="comment[text]" placeholder="text">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Submit</button>
+            </div>
+        </form>
+         <a href="/">Back to Home page</a><br>
+         <a href="/items">Back to all items</a><br>
+        </div>
+    </div>
+</div>
+
+<%include ../partials/footers%>
+
